@@ -1,0 +1,18 @@
+<div class="row">
+    <div class="card">
+        <ul>
+            <li *ngFor=" let ajuste of ajustes" >
+                <div class="card-footer">
+                    <a [routerLink]="['/ajustes-detalle']"
+                       [queryParams]="{id:ajuste.id,name:ajuste.name,value:ajuste.value}">
+                        {{ajuste.name}}
+                        {{ajuste.value}}
+                    </a>
+                </div>
+            </li>
+        </ul>
+            
+    </div>
+
+</div>
+

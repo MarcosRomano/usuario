@@ -1,0 +1,16 @@
+<div class="row">
+    <div class="card">
+        <ul>
+            <li *ngFor=" let ciudad of ciudades" >
+                <div class="card-footer">
+                    <a [routerLink]="['/ciudad-detalle']"
+                       [queryParams]="{id:ciudad.id,name:ciudad.name}">
+                         {{ciudad.name}}
+                    </a>
+                </div>
+            </li>
+        </ul>
+            
+    </div>
+
+</div>

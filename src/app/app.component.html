@@ -1,0 +1,42 @@
+
+  
+
+ <div class="dropdown">
+   <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+    Usuarios
+   </button>
+    <div class="dropdown-menu">
+     <a class="dropdown-item" [routerLink]="['/crear-usuario']">Crear</a>
+     <a class="dropdown-item" [routerLink]="['/listar-usuario']">Listar</a>
+     
+    
+    </div>
+  </div>
+  <div class="dropdown">
+    <button type="button" class="btn btn-primary dropdown-toggle ml-2 " data-toggle="dropdown">
+      Ciudades
+    </button>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" [routerLink]="['/ciudad-crear']">CrearCiudad</a>
+        <a class="dropdown-item" [routerLink]="['/ciudad-listar']">Listar</a>
+        
+        
+      </div>
+  </div>
+  <div class="dropdown">
+    <button type="button" class="btn btn-primary dropdown-toggle ml-2 "data-toggle="dropdown">
+      Ajustes
+    </button>
+    <div class="dropdown-menu">
+      <a class="dropdown-item" [routerLink]="['/ajustes-crear']">Crear</a>
+      <a class="dropdown-item" [routerLink]="['/ajustes-listar']">Listar</a>
+      
+      
+    </div>
+</div>
+
+
+
+  
+
+<router-outlet></router-outlet>

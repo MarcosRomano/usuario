@@ -1,0 +1,37 @@
+<div class="container">
+    <div class="row" >
+        <div class="col-md-12">
+            <div class="card" >
+                <div class="card-body">
+                   
+                    <form [formGroup]="form">
+                        <div class="form-group">
+                        Email: 
+                            <input class="form-control"  type="email" formControlName="email" [ngClass]="{'is-invalid' : enviado && f.email.errors}" >
+                            <p *ngIf="f.email.errors  && enviado " >
+                                <small class="text-danger" *ngIf="f.email.hasError('required')">Es Requerido Completar Email </small>
+                                <small class="text-danger" *ngIf="f.email.hasError('maxlength')">No debe ser mayor a 20 caracteres </small>
+                                <small class="text-danger" *ngIf="f.email.hasError('minlength')"> Es Requerido un minimo de 5 caracteres  </small>
+                                <small class="text-danger" *ngIf="f.email.hasError('pattern')"> Su correo es Inexistente  </small>
+                            </p>
+                    
+                        </div>
+                        <div class="form-group">
+                            Password: 
+                           <input class="form-control" [ngClass]="{'is-invalid' : enviado && f.password.errors}"  formControlName="password"  type="password">
+                           
+                           <p *ngIf="f.password.errors  && enviado " >
+                            <small class="text-danger" *ngIf="f.password.hasError('required')">Es Requerido Completar Password </small>
+                          </p>
+                        </div> 
+                    </form>
+                </div>    
+                <div class="card-footer justify-content-center " >
+                    <button  class="btn btn-primary  btn-lg " (click)="guardar()" >Enviar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+

@@ -1,0 +1,35 @@
+<p>ng-class works!</p>
+<div class="card-body" >
+    <button class="btn btn-primary ml-2" (click)="fondo = 'bg-dark'">Marcar1</button>
+    <button class="btn btn-primary ml-2" (click)="fondo1='bg-danger'">Marcar2</button>
+    <button class="btn btn-primary ml-2" (click)="fondo='bg-light'">Marcar2</button>
+    
+    <p [ngClass]="fondo">
+      El presente Documento Digital es el Certificado de Antecedentes Penales conforme los términos de la Ley
+      25.506, el Decreto 2628/2002 y el Decreto 283/2003, siendo su código de trámite: P12951011, de solicitud:
+      03100827843 y de seguridad: F04C34163B 
+    </p>
+    <p [ngClass]="fondo1">
+       Conforme a la Disposición D.N.R.N.R N° 3/2012 este documento electrónico firmado digitalmente constituye el
+       único instrumento por el cual la Dirección Nacional del Registro Nacional de Reincidencia certifica los
+       antecedentes penales, su validación se efectúa en: https://www.dnrec.jus.gov.ar/ConsultaCAP/
+    </p>
+  
+  </div>
+  <div> 
+    <button (click)="activo='auto'" class="btn btn-primary btn-lg  ml-2 " >Auto</button>
+    <button (click)="activo='moto'" class="btn btn-primary btn-lg ml-2 " >Moto</button>
+    <button (click)="activo='bici'" class="btn btn-primary btn-lg  ml-2 " >Bicicleta</button>
+    <button (click)="activo='cole'" class="btn btn-primary btn-lg ml-2 " >Colectivo</button>
+    <button (click)="activo='camion'"   class="btn btn-primary btn-lg ml-2 " >Camion</button>
+    <button (click)="activo='cuatri'" class="btn btn-primary btn-lg ml 4 ml-2 " >Cuatriciclo</button>
+  
+    <img class="d-none" [ngClass]="{'d-block':activo=='auto'}"  src="https://cdn.aarp.net/content/dam/aarp/auto/2017/07/1140-hyundai-ioniq-great-cars-road-trips-esp.imgcache.revfd63981c76a67e8a4ed28622bb76883e.web.1125.641.jpg" alt="">
+    <img class="d-none" [ngClass]="{'d-block':activo=='moto'}"  src="https://s3.eestatic.com/2019/11/05/omicrono/Omicrono_442216573_137127011_1706x960.jpg" alt=""> 
+    <img class="d-none" [ngClass]="{'d-block':activo=='bici'}" src="https://cdn.brujulabike.com/media/10977/conversions/canyon-lead-1000.jpg " alt=""> 
+    <img class="d-none" [ngClass]="{'d-block':activo=='cole'}" src="https://img.autocosmos.com/noticias/fotosprinc/NAZ_75afbdc784fb4e4abbe2a6b721f7e51a.jpg" alt=""> 
+    <img class="d-none" [ngClass]="{'d-block':activo=='camion'}" src="https://www.sobrecamiones.com/wp-content/uploads/2016/06/article-camiones-mas-vendidos-espana-2015-56a0d86f044d3-1050x600.jpg" alt=""> 
+    <img class="d-none" [ngClass]="{'d-block':activo=='cuatri'}"  src="https://d26lpennugtm8s.cloudfront.net/stores/138/995/products/7114891-e7702eabb2dea9e63c14877690192494-640-0.jpg" alt=""> 
+  
+  
+  </div>
